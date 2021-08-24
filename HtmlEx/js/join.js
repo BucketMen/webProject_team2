@@ -10,3 +10,21 @@ for(let i = 0; i < join_text.length - 1; i++){
         }
     }
 }
+
+function mailcheck()
+{
+    const email_select = document.getElementById("email_select");
+    const displaytext = email_select.options[email_select.selectedIndex].text;
+    document.getElementById("email_last").value=displaytext;
+}
+
+const email_select = document.querySelector(".email_select");
+email_select.onchange = () => {
+    const email_last = document.querySelector("#email_last");
+    if(email_select.selectedIndex == 0){
+            document.querySelector('#email_last').readOnly = false;
+    }else{
+            document.querySelector('#email_last').readOnly = true;
+    }
+    email_last.value = email_select.options[email_select.selectedIndex].text; 
+}   

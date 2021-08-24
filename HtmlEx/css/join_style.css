@@ -2,6 +2,25 @@ body {
     background-color: rgb(240, 240, 240);
 }
 
+#header {
+    box-sizing: border-box;
+    margin: 0px auto;
+    padding: 106px 0px 53px;
+    width: 768px;
+    height: 100%;
+    text-align: center;
+    
+}
+
+#header a {
+    font-weight: bold;
+    font-size: 4em;
+    text-decoration: none;
+    color: rgb(240, 240, 240);
+    line-height: 44px;
+    background-color: black;
+}
+
 #mainheader {
     background-color: rgb(240, 240, 240) !important;
 }
@@ -11,14 +30,10 @@ body {
     width: 100%;
     justify-content: center;
     align-items: center;
-    color: rgb(158, 107, 107);
+    color: rgb(240, 240, 240);
 }
 
-#mainlogo {
-    margin: 30px 0px 30px;
-    font-size: 3em;
-    color: black;
-}
+
 
 #join_content {
     margin: 0 auto;
@@ -108,17 +123,59 @@ body {
     margin: 30px 0px;
     width: 100%;
     height: 53px;
-    background-color:deepskyblue;
+    background-color:black;
     color: white;
     font-weight: bold;
     font-size: 1.1em;
 }
 
 .join_button:hover {
-    background-color:rgb(0, 181, 241);
+    background-color:rgb(51, 52, 53);
 }
 
 .button_text {
     box-sizing: border-box;
     padding: 10px;
 }
+
+.email_text {
+    border: 0px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.email_xx {
+    width: 167px;
+}
+
+.email_yy{
+    width: 167px;
+}
+
+.email_zz{
+    width: 127px;
+}
+
+
+.email_select {
+    border: 0px;
+    width: 100%;
+    box-sizing: border-box;
+}
+#email_last {
+    border: 0px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.A{
+    padding: 0px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+}
+
+
+
