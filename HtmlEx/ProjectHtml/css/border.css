@@ -1,0 +1,137 @@
+a {
+    color: black;
+    text-decoration: none;
+}
+#swiper-container__id {
+    width: 1200px;
+    height: 600px;
+}
+
+.border_contain {
+    margin: 30px auto;
+    width: 1000px;
+}
+
+.border_insert_button {
+    display: flex;
+    
+    justify-content: space-between;
+    /* margin-left: 30px;
+    margin-bottom: 5px; */
+    margin-right: 0px;
+    width: 1000px;
+    padding-bottom: 15px;
+}
+
+.border_insert_button button {
+    margin: 0px 5px;
+    width: 70px;
+    height: 30px;
+    font-size: 0.9em;
+    font-weight: 400;
+    background-color: rgb(0, 26, 255);
+    color: white;
+    outline: none;
+    border: none;
+
+}
+
+.border_insert_button button:hover {
+    background-color:rgb(0, 181, 241);
+}
+.border_header{
+    font-size: 2em;
+}
+.border_body {
+    display: block;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.row_header{
+    text-align: center;
+}
+
+.border_table {
+    width: 1000px;
+    border-collapse: collapse;
+
+}
+
+.border_table tr {
+    height: 30px;
+}
+
+.border_table tr td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    /* 게시글 높이를 관여하는 css */
+}
+#titleset{
+    text-align: left;
+    justify-content: center;
+}
+.imgtitle{
+    display: inline-block;
+    vertical-align: middle;
+}
+.border_table tr th {
+    padding-top: 7px;
+    /* border-bottom: 1px solid rgb(223, 223, 223); */
+    background: rgb(240, 240, 240);
+}
+
+.border_table tr td {
+    border-bottom: 1px solid rgb(223, 223, 223);
+    text-align: center;
+}
+
+
+.border_table tr .border_index{
+    /* border-right: 1px solid rgb(230, 230, 230); */
+    
+    width: 100px;
+}
+
+.border_table tr .border_title{
+    /* border-right: 1px solid rgb(230, 230, 230); */
+    width: 450px;
+}
+
+.border_table tr .border_writer{
+    /* border-right: 1px solid rgb(230, 230, 230); */
+    width: 175px;
+}
+
+.border_table tr .border_date{
+    /* border-right: 1px solid rgb(230, 230, 230); */
+    width: 175px;
+}
+
+.border_table tr .border_count{
+    width: 100px;
+}
+
+
+
+.this_page {
+    margin: 10px 50px 0px 0px;
+    text-align: right;
+}
+
+.select_page {
+    text-align: center;
+}
+
+.search {
+	margin:30px 0px;
+	display: flex;
+	justify-content: center;
+}
+.search input{
+	margin-right: 5px;
+}
+#borderimg{
+    height: 50px;
+     padding-top: 5px;
+}
