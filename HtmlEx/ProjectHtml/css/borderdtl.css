@@ -1,0 +1,27 @@
+#dtlcontainer{
+   justify-content: left; 
+   border: solid 1px black; 
+   margin: 20px; 
+   padding: 10px;
+}
+#infopage{
+    background-color: blueviolet;
+}
+#writerinfo{
+    display: flex;
+}
+#writerinfo span{
+    padding-right: 15px; 
+    padding-left: 15px;
+}
+#dtlinfo{
+    display: flex;
+    justify-content: left;
+}
+#dtlmain{
+    border: solid 1px black;
+}
+.mainimg{
+    padding: 1%;
+    width: 100%;
+}

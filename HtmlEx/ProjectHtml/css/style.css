@@ -4,18 +4,16 @@ body {
     margin: 0;
     font-family: 'Do Hyeon', sans-serif;
     font-size: 16px;
+    /* 전체페이지의 백그라운드 컬러 지정할려면 여기에 작성 */
 }
-
 #container {
     box-sizing: border-box;
     margin: 0 auto;
     width: 1200px;
     height: 100%;
 }
-#swiper-container__id {
-    width: 1200px;
-    height: 600px;
-}
+
+
 #mainheader {
     box-sizing: border-box;
     width: 100%;
@@ -26,39 +24,6 @@ body {
     background-color: black;
     padding: 0 20px;
 }
-.downnav{
-    color: white;
-}
-
-#headersearch button{
-    background-color: cornflowerblue;
-    border-radius: 4px;
-    border: none;
-}
-
-#navbar {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    color: rgb(158, 107, 107);
-}
-
-#headersearch{
-    padding-top: 7px;
-}
-nav a {
-    color: rgb(240, 240, 240);
-    text-decoration: none;
-}
-nav a #logo {
-    color:deepskyblue;
-}
-
-#mainlogo {
-    font-size: 1.5em;
-}
-
 nav ul {
     margin: 5px 0px;
     list-style-type: none;
@@ -67,56 +32,67 @@ nav ul {
     justify-content: space-between;
     width: 800px;
 }
-
 nav ul li {
     padding: 10px;
 }
-
-.__links {
-    margin: 0 5px;
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
 }
+
+
 #mainboard {
     display: flex;
+    justify-content: space-between;
     width: 100%;
     height: 100%;
     margin-bottom: 30px;
     margin-top: 30px;
-    background-color: rgb(253, 252, 252);
-}
-#mainimage {
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 600px;
-}
-#mainimg {
-    width: 100%;
 }
 .mainsection {
-    width: 100%;
+    margin: 9px;
     height: 100%;
-    margin-right: 10px;
-    
     border: solid 1px gray;
     border-radius: 5px;
-    padding: 20px;
+    /*padding: 20px; */
     box-shadow: 5px 5px rgb(233, 232, 232);
 }
-#tableset{
-    padding: 0px 20px 20px 20px;
+section table tr td{
+    width: 570px;
+} 
+table {
+    width: 100%;
+}
+article section table tr a{
+    text-decoration: none;
+}
+#boardtitle{
+    font-size: 30px;
+    text-align: left;
 }
 .border-sub-title{
     display: flex;
     justify-content: space-between;
 }
-#boardplus{
-    text-align: right;
+#slash{
+    width: 0px;
 }
-section table tr td{
-    width: 550px;
-} 
+#card{
+    padding: 0px;
+    justify-content: center; 
+    display: flex;
+    margin-top: 30px;
+}
+#more{
+    color: rgb(194, 191, 191); 
+    font-size: medium; 
+    text-decoration: none;
+    padding-right: 10px;
+}
+hr{
+    margin: 0px;
+}
+
 
 footer ul {
     list-style-type: none;
@@ -128,42 +104,8 @@ footer ul {
     color: white;
     height: 100px;
 }
-
 footer ul li {
     padding-top: 40px;
-    /* width: 100%; */
     width: 20%;
     text-align: center;
-}
-
-table {
-    width: 100%;
-}
-table tbody {
-    display: inline-block;
-    width: 100%;
-}
-#boardtitle{
-    font-size: 30px;
-    text-align: left;
-
-}
-
-#slash{
-    width: 0px;
-} 
-
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0;
-}
-#card{
-    padding: 0px;
-    justify-content: center; 
-    display: flex;
-    margin-top: 30px;  
-}
-article section table tr a{
-    text-decoration: none;
 }
