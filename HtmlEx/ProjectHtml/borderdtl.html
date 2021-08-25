@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/borderdtl.css" />
     
 
-    <title>세일정보</title>
+    <title>상세페이지</title>
   </head>
 <body>
     <div id="container">
@@ -104,39 +104,124 @@
                 </div>
               </nav>
         </header>
-
-        <h1>글 상세페이지</h1>
         <div id="dtlcontainer">
-            <span style="color: rgb(253, 61, 61);">국내</span>
-            <h2>게시글 제목</h2>
+            
+            <h2>
+              <span style="color: rgb(253, 61, 61);font-size: 0.6em;">국내<br></span>
+              게시글 제목
+            </h2>
+            <div id="writerinfo">
+              <div>작성자: ${}</div>
+              <span> | </span>
+              <div>조회수 ${}</div>
+              <span> | </span>
+              <div>댓글 ${}</div>
+              <span> | </span>
+              <div>작성일 ${}</div>
+            </div>
             <div id="infopage">
-              <div id="writerinfo">
-                <div>작성자: ${}</div>
-                <span> | </span>
-                <div>조회수 ${}</div>
-                <span> | </span>
-                <div>댓글 ${}</div>
-                <span> | </span>
-                <div>작성일 ${}</div>
-            </div>
-            <div id="dtlinfo">
-                링크: <a href="http://www.ssg.com/item/dealItemView.ssg?itemId=1000178563278">${여기에 작성한 링크가 상단에 나타난다.}</a>
-            </div>
+
+              <table id="infotable">
+                <tr style="border: solid 1px rgb(182, 182, 182);">
+                  <td id="infoname" align="center" style="border: solid 1px rgb(182, 182, 182);">링크</td>
+                  <td id="infocontent">링크주소 ${}</td>
+                </tr>
+                <tr>
+                  <td id="infoname"  align="center" style="border: solid 1px rgb(182, 182, 182); ">기타사항</td>
+                  <td id="infocontent" style="border: solid 1px rgb(182, 182, 182);">기타사항내용 </td>
+                </tr>
+              </table>
             </div>
             <img src="#" alt="">
             <main>
               <div id="dtlmain">
                 <img src="images/shopping.jpg" class="img-fluid mainimg" alt="...">
-                <div style="border: solid 1px black;">
-                  게시글의 내용입니다
+                <div id="dtlcontent">
+                  안녕하세요
+                  <br>
+                  이곳은 게시글의 내용이 들어오는 부분입니다 
                 </div>
               </div>
             </main>
-            <div>
-                <h3>다음글/이전글</h3>
+            <div id="otherpage">  
+              <table id="infotable">
+                <tr style="border: solid 1px rgb(182, 182, 182);">
+                  <td id="infoname" align="center" style="border: solid 1px rgb(182, 182, 182);">다음글</td>
+                  <td id="infocontent"><a href="#">다음 게시글</a></td>
+                </tr>
+                <tr>
+                  <td id="infoname"  align="center" style="border: solid 1px rgb(182, 182, 182); ">이전글</td>
+                  <td id="infocontent" style="border: solid 1px rgb(182, 182, 182);"><a href="#">이전 게시글</a></td>
+                </tr>
+              </table>
             </div>
+            <hr id="hr">
+            <!-- 댓글 시작 -->
+            <div id="dtlcomment">
+
+              <div class="commenthd">
+                    <div style="display: inline;">댓글 <b style="color: indianred;">3</b></div>
+              </div>
+              
+              <div id="commentbox">
+                <div id="commentup">
+                  <div style="display: flex;">
+                    <div id="commentname">nickname1 </div><div> 님</div> &nbsp;
+                    <div style="color: gray;"> [2021:15:48]</div>
+                  </div>
+                  <div>
+                    <a href="#"><i class="fas fa-minus-circle"></i></a>
+                    <!-- 작성자인 경우에만 나타나게 만든다. -->
+                  </div>
+                </div>
+                <div id="commentdown">comment</div>
+              </div>
+
+              <div id="commentbox">
+                <div id="commentup">
+                  <div style="display: flex;">
+                    <div id="commentname">nickname2 </div><div> 님</div>  &nbsp;
+                    <div style="color: gray;"> [2021:15:48]</div>
+                  </div>
+                  <div>
+                    <a href="#"><i class="fas fa-minus-circle"></i></a>
+                    <!-- 작성자인 경우에만 나타나게 만든다. -->
+                  </div>
+                </div>
+                <div id="commentdown">comment</div>
+              </div>
+
+              <div id="commentbox">
+                <div id="commentup">
+                  <div style="display: flex;">
+                    <div id="commentname">nickname3 </div><div> 님</div>  &nbsp;
+                    <div style="color: gray;"> [2021:15:48]</div>
+                  </div>
+                  <div>
+                    <a href="#"><i class="fas fa-minus-circle"></i></a>
+                    <!-- 작성자인 경우에만 나타나게 만든다. -->
+                  </div>
+                </div>
+                <div id="commentdown">comment</div>
+              </div>
+
+              <hr>
+
+              <form action="" style="display: grid;">
+                <div style="padding: 0px 5px 0px 5px;">
+                  <textarea name="" id="textbox" placeholder="여기에 입력해주세요"></textarea>
+                  
+                  <!-- 로그인 하기 전까지는 hidden -->
+                </div>
+                <div style="text-align: right; padding: 5px; padding-top: 0px;">
+                  <input type="submit" id="commentsubmit" value="댓글 작성하기">
+                </div>
+              </form>
+            </div>
+            <!-- 댓글 종료 -->
         </div>
-        <div style="justify-content: left; border: solid 1px black; margin: 20px; padding: 10px;">댓글 만들 공간</div>
+
+        
 
         <footer>
             <div id="foot">
