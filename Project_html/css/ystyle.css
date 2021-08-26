@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Sunflower:wght@300;500;700&display=swap');
+
+
+body {
+    margin: 0;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 16px;
+    /* 전체페이지의 백그라운드 컬러 지정할려면 여기에 작성 */
+}
+#container {
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 1200px;
+    height: 100%;
+}
+
+
+#mainheader {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 0 20px;
+}
+nav ul {
+    margin: 5px 0px;
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    width: 800px;
+}
+nav ul li {
+    padding: 10px;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+
+#mainboard {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.mainsection {
+    margin: 9px;
+    height: 100%;
+    border: solid 1px gray;
+    border-radius: 5px;
+    /*padding: 20px; */
+    box-shadow: 5px 5px rgb(233, 232, 232);
+}
+section table tr td{
+    width: 570px;
+} 
+table {
+    width: 100%;
+}
+article section table tr a{
+    text-decoration: none;
+}
+#boardtitle{
+    font-size: 30px;
+    text-align: left;
+}
+.border-sub-title{
+    display: flex;
+    justify-content: space-between;
+}
+#slash{
+    width: 0px;
+}
+#card{
+    padding: 0px;
+    justify-content: center; 
+    display: flex;
+    margin-top: 30px;
+}
+#more{
+    color: rgb(194, 191, 191); 
+    font-size: medium; 
+    text-decoration: none;
+    padding-right: 10px;
+}
+hr{
+    margin: 0px;
+}
+
+
+footer ul {
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(58, 58, 58);
+    color: white;
+    height: 100px;
+}
+footer ul li {
+    padding-top: 40px;
+    width: 20%;
+    text-align: center;
+}
+html, body {
+    height: 100%;
+  }
+  
+  .wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .button {
+    font-family: 'Sunflower', sans-serif;
+    width: 140px;
+    height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    margin: 0px 10px;
+    }
+  
+  .button:hover {
+    background-color: #2EE59D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
