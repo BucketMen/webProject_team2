@@ -1,0 +1,108 @@
+h2{
+    padding-left: 20px;
+}
+#dtlcontainer{
+   justify-content: left; 
+   padding-top: 20px;
+   padding-bottom: 20px;
+   
+   background-color: rgb(247, 246, 246);
+}
+#infopage{
+    border-radius: 3px;
+}
+#writerinfo{
+    display: flex;
+    padding-bottom: 30px;
+    padding-left: 20px;
+}
+#writerinfo span{
+    padding-right: 15px; 
+    padding-left: 15px;
+}
+#dtlinfo{
+    display: flex;
+    justify-content: left;
+}
+#dtlmain{
+}
+.mainimg{
+    padding: 1%;
+    width: 100%;
+}
+#infoname{
+    justify-content: center;
+    width: 10%;
+    background-color: rgb(165, 165, 165);
+}
+#infocontent{
+    padding-left: 20px;
+}
+#infotable{
+    border: solid 1px rgb(182, 182, 182);
+}
+#otherpage{
+    margin: 1%;
+}
+#dtlcontent{
+    margin: 1%;
+    margin-bottom: 50px;
+}
+
+#dtlcomment{
+    justify-content: left; 
+    border: solid 1px black; 
+    padding: 0%;
+    
+}
+.commenthd{
+    background-color: darkgrey;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 40px;
+    padding-top: 10px;
+}
+#commentbox{
+    border: solid 1px;
+    border-radius: 3px;
+    background-color: snow;
+    padding: 8px;
+    margin: 2px;
+}
+#comment{
+    border: solid 1px;
+    border-radius: 3px;
+    background-color: rgb(255, 238, 237);
+    padding: 8px;
+    margin: 2px;
+}
+#hr{
+    margin: 20px 5px 20px 5px;
+    color: black;
+}
+#commentname{
+    font-size: x-large;
+    font-weight: bold;
+    line-height: 100%;
+    padding-right: 3px;
+}
+#commentup{
+    display: flex;
+    justify-content: space-between;
+}
+#commentinput{
+    width: 99.5%;
+    height: 10em;
+    margin: 3px;
+}
+#textbox{
+    width: 100%;
+    height: 150px
+}
+#commentsubmit{
+    width: 10em;
+    height: 40px;
+    border-radius: 5px;
+    background-color: tomato;
+    font-size: 1.3em;
+}

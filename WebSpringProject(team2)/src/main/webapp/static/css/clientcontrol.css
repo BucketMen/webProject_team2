@@ -1,0 +1,23 @@
+.client_control_heander{
+    display: flex;
+    margin: 10px;
+}
+
+.button_position{
+    display: flex;
+    justify-content: flex-end;
+    margin : 10px 0;
+   
+}
+
+.client_control_heander #title_size{
+    font-size: 2em;
+}
+
+#control{
+    margin-right: 5px;
+}
+
+.select_page {
+    text-align: center;
+}

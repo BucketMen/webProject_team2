@@ -1,0 +1,19 @@
+.borderdtlcontrol_header{
+    margin: 10px;
+}
+.title_size{
+    font-size: 2em;
+}
+
+.button_position{
+    display: flex;
+    justify-content: flex-end;
+    margin : 10px 0;
+}
+
+#client_control{
+    margin-right: 5px ;
+}
+.select_page {
+    text-align: center;
+}

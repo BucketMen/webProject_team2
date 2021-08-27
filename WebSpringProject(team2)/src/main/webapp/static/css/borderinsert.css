@@ -1,0 +1,35 @@
+#insertcontainer{
+    padding: 2%;  
+}
+#titleinsert{
+    border: none; 
+    width: 30em; 
+    font-size: 1.8em; 
+    margin-left: 10px;
+}
+#contentinsert{
+    width: 100%;
+}
+#linkarea{
+    display: flex;
+    border: solid 1px;
+    justify-content: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#linkname{
+    width: 10%;
+    text-align: center;
+    padding-top: 3px;
+    border-right: solid 1px;
+    background-color: tomato;
+}
+#linkbox{
+    width: 90%;
+    border: none;
+    padding-left: 10px;
+}
+#selectcategory{
+    padding: 8px;
+    margin-bottom: 10px;
+}
