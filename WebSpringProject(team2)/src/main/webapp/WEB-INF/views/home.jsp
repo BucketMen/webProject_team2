@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="true" %>
+<%@ page session="false" %>
 <!doctype html>
 <html lang="ko">
   <head>
@@ -11,7 +11,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     
     <script src="https://kit.fontawesome.com/c3df4d7d1c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
@@ -33,14 +33,14 @@
                         전체글
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown"  style="width: 100px;">
-                            <li><a class="dropdown-item" href="border.html">전체글</a></li>
-                            <li><a class="dropdown-item" href="border.html">국내 핫딜</a></li>
-                            <li><a class="dropdown-item" href="border.html">해외 핫딜</a></li>
-                            <li><a class="dropdown-item" href="border.html">자유 게시판</a></li>
-                            <li><a class="dropdown-item" href="border.html">질문 게시판</a></li>
-                            <li><a class="dropdown-item" href="border.html">유저 갤러리</a></li>
-                            <li><a class="dropdown-item" href="border.html">공지사항</a></li>
-                            <li><a class="dropdown-item" href="border.html">건의 | 문의사항</a></li>
+                            <li><a class="dropdown-item" href="/border.html">전체글</a></li>
+                            <li><a class="dropdown-item" href="/border.html">국내 핫딜</a></li>
+                            <li><a class="dropdown-item" href="/border.html">해외 핫딜</a></li>
+                            <li><a class="dropdown-item" href="/border.html">자유 게시판</a></li>
+                            <li><a class="dropdown-item" href="/border.html">질문 게시판</a></li>
+                            <li><a class="dropdown-item" href="/border.html">유저 갤러리</a></li>
+                            <li><a class="dropdown-item" href="/border.html">공지사항</a></li>
+                            <li><a class="dropdown-item" href="/border.html">건의 | 문의사항</a></li>
                         </ul>
                     </li> 
 
@@ -100,7 +100,9 @@
           </nav> 
     </header>
     <!-- header End ------------------------------------------------------------------------------------------------------------------ -->
+    
     <main>
+    
       <div id="card">
             <div class="card" onclick="location.href='border.html'" style=" width: 18rem; margin: 10px;">
                     <img src="images/s1.png" class="card-img-top" alt="...">
@@ -497,8 +499,9 @@
               </table>
           </section>
       </article>
+  
   </main>
-    <!-- main End ------------------------------------------------------------------------------------------------------------------ -->
+   <!-- main End ------------------------------------------------------------------------------------------------------------------ -->
 
     <footer>
       <div id="foot">

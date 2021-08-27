@@ -1,5 +1,5 @@
 package com.koreadeal.web.model;
 
-public class Model {
+public class LoginModel {
 
 }
