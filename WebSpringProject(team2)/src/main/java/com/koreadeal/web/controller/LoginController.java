@@ -19,17 +19,17 @@ import com.koreadeal.web.service.LoginService;
 @Controller
 public class LoginController {
 	
-	@Autowired
-	private LoginService loginService;
+	//@Autowired
+	//private LoginService loginService;
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public ModelAndView home(
-			@RequestParam("user_id")String user_id,
-			@RequestParam("user_pwd")String user_pwd,
-			@RequestParam("blockdata")String blockdata
+			@RequestParam(name = "user_id", required = false)String user_id,
+			@RequestParam(name = "user_pwd", required = false)String user_pwd,
+			@RequestParam(name = "blockdata", required = false)String blockdata
 			
 			) {
-		loginService.loginCheck(user_id, user_pwd, blockdata);
+		//loginService.loginCheck(user_id, user_pwd, blockdata);
 		return new ModelAndView("/login");
 	}
 	
