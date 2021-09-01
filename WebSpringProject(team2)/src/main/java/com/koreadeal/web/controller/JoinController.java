@@ -17,7 +17,7 @@ public class JoinController {
 	@Autowired
 	private JoinDao joinDao;
 	
-	@RequestMapping(value="/join", method = RequestMethod.GET)
+	//@RequestMapping(value="/join", method = RequestMethod.GET)
 	
 	
 }

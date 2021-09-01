@@ -16,7 +16,7 @@
     <script src="https://kit.fontawesome.com/c3df4d7d1c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <title>Homepage</title>
+    <title>Mainpage</title>
   </head>
   <body style="width: 1200px; margin: 0 auto;">
     <header>
@@ -501,7 +501,7 @@
       </article>
   
   </main>
-   <!-- main End ------------------------------------------------------------------------------------------------------------------ -->
+    <!-- main End ------------------------------------------------------------------------------------------------------------------ -->
 
     <footer>
       <div id="foot">
