@@ -10,6 +10,10 @@ public class HomeController {
 	
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public ModelAndView home() {
+		//"/home"을 붙여서 get방식으로 보내라는 의미 
+		ModelAndView mav = new ModelAndView();
+		System.out.println(mav);
 		return new ModelAndView("/home");
 	}
+	
 }

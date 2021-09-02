@@ -1,43 +1,48 @@
 package com.koreadeal.web.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import com.koreadeal.web.DAO.LoginDAO;
+import com.koreadeal.web.model.LoginModel;
 
+@Service
 public class LoginService {
 
-	@Autowired
-	private LoginDAO loginDAO;
-
-	public String loginCheck(String user_id, String user_pwd, String blockdata) {
-		int idflag = loginDAO.idCheck(user_id);
-		int pwdflag = loginDAO.idCheck(user_pwd);
-		int blockflag = loginDAO.idCheck(blockdata);
-
-		if (idflag == 1) {
-			pwdCheck(user_pwd);
-		}
-
-		else {
-			return "id_fail";
-		}
-
-		return user_pwd;
-	}
+	/*
+	 * @Autowired private LoginDAO loginDAO;
+	 * 
+	 * public String loginCheck(String user_id, String user_pwd, String blockdata) {
+	 * int idflag = loginDAO.idCheck(user_id); int pwdflag =
+	 * loginDAO.idCheck(user_pwd); int blockflag = loginDAO.idCheck(blockdata);
+	 * 
+	 * if (idflag == 1) { pwdCheck(user_pwd); }
+	 * 
+	 * else { return "id_fail"; }
+	 * 
+	 * return user_pwd; }
+	 * 
+	 * public String idCheck(String user_id) { int flag = loginDAO.idCheck(user_id);
+	 * return null; }
+	 * 
+	 * public String pwdCheck(String user_pwd) { int flag =
+	 * loginDAO.idCheck(user_pwd); return null; }
+	 * 
+	 * public String blockCheck(String blockdata) { int flag =
+	 * loginDAO.idCheck(blockdata); return null; }
+	 * 
+	 * DAO에서 서비스로 데이터가 넘어온다.
+	 */
 	
-	public String idCheck(String user_id) {
-		int flag = loginDAO.idCheck(user_id);
-		return null;
-	}
-
-	public String pwdCheck(String user_pwd) {
-		int flag = loginDAO.idCheck(user_pwd);
-		return null;
-	}
-
-	public String blockCheck(String blockdata) {
-		int flag = loginDAO.idCheck(blockdata);
-		return null;
+	public LoginModel getLoginModel() {
+		LoginModel loginModel = new LoginModel();
+		loginModel.setLogin_id("");
+		loginModel.setLogin_pwd("");
+		loginModel.setLogin_flag("3");
+		loginModel.setSubmit_flag("false");
+		loginModel.setBlockdata("0");
+		System.out.println(loginModel.getBlockdata());
+		
+		
+		return loginModel;
 	}
 }
 

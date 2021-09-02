@@ -1,10 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
 <!doctype html>
 <html lang="ko">
   <head>
+    <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -141,7 +140,7 @@
                       <th id="boardtitle" class="border-sub-title">
                           <div>
                             <i class="far fa-clock"></i>
-                            <a href="border.html" style="text-decoration: none; color: black;">최근 게시글</a>
+                            <a href="/border" style="text-decoration: none; color: black;">최근 게시글</a>
                             </div>
                           <div><a href="border.html" id="more"> 더보기</a></div>
                       </th>
@@ -157,14 +156,14 @@
                   <tr>
                       <td id="tableline">
                           <a>[핫딜 게시판] </a>
-                      <a href="#">css 기초 다지기1 | </a>
+                      <a href="/border">css 기초 다지기1 | </a>
                       <span>5</span>
                   </td>
                   </tr>
                   <tr>
                       <td id="tableline">
                           <a>[핫딜 게시판] </a>
-                          <a href="#">css 기초 다지기1 | </a>
+                          <a href="/border">css 기초 다지기1 | </a>
                           <span>5</span>
                       </td>
                   </tr>
@@ -501,48 +500,19 @@
       </article>
   
   </main>
-   <!-- main End ------------------------------------------------------------------------------------------------------------------ -->
+    <!-- main End ------------------------------------------------------------------------------------------------------------------ -->
 
-    <footer>
-      <div id="foot">
-          <!-- 이름, 연락처, 주소, 이메일 -->
-          <ul>
-            <li>부산 코리아IT학원</li>
-            <li id="slash">|</li>
-            <li>웹프로젝트 2조</li>
-            <li id="slash">|</li>
-            <li>팀원: 이은수, 손효현, 유정무</li>
-            <li id="slash">|</li>
-            <li>주소: 부산 진구 전포동</li>
-            <li id="slash">|</li>
-            <li>contect-us@kakao.com</li>
-          </ul>
-      </div>
-  </footer>
-
+    <jsp:include page="/WEB-INF/views/include/footer.jsp"></jsp:include>
+	
     <!-- Optional JavaScript; choose one of the two! -->
-    <script>
-        var mySwiper = new Swiper(".swiper-container", {
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            }
-        });
-    </script>
-    
+	
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/js/header.js"></script>
     
   </body>
 </html>

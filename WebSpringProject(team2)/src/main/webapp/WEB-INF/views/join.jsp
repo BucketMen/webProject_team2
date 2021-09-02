@@ -2,14 +2,14 @@
     pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="chrome">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
     <script src="https://kit.fontawesome.com/c3df4d7d1c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/hstyle.css" />
+    <link rel="stylesheet" href="/css/hstyle.css"/>
     <link rel="stylesheet" href="/css/join_style.css" />
 </head>
 <body>
@@ -19,9 +19,6 @@
     <div id="container">
         <header id="mainheader">
             <nav id="join_navbar">
-                <!-- 로고(로고이미지, 홈페이지 이름) -->
-                <!-- 메뉴(자기소개, 게시글) -->
-                <!-- 링크(로그인, 회원가입) -->
                 <a href="/home.html" id="mainlogo">Korea's Deal</a>
             </nav>
         </div>
@@ -152,17 +149,7 @@
             </form>
             </form>
         </main>
-        <footer>
-            <div id="foot">
-                <!-- 이름, 연락처, 주소, 이메일 -->
-                <ul>
-                    <li>웹프로젝트 2조</li>
-                    <li>팀원: 이은수, 손효현, 유정무</li>
-                    <li>주소: 부산 진구 전포동</li>
-                    <li>이메일: contect-us@kakao.com</li>
-                </ul>
-            </div>
-        </footer>
+        <jsp:include page="/WEB-INF/views/include/footer.jsp"></jsp:include>
     </div>
 
     <script src="/js/join.js"></script>
