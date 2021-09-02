@@ -35,7 +35,7 @@
                 </div>
                 
                 <div id="pwd_error" class="error">비밀번호를 입력해 주세요.</div>
-                <input type="submit" class="input_submit" value="로그인">
+                <input type="submit" class="input_submit" value="로그인"><!-- js호출 -->
                 <button type="button" onclick="location.href='join.html'" class="btn btn-secondary">회원가입</button>
                
 

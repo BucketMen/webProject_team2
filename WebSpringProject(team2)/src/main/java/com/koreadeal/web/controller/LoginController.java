@@ -59,8 +59,8 @@ public class LoginController {
 			session.setAttribute("loginUserBean", userBean);
 			return mavLoginSuccess;
 		}else {
-			ModelAndView mavLoginFailure = new ModelAndView("/home");
 			
+			ModelAndView mavLoginFailure = new ModelAndView("/home");
 			return mavLoginFailure;
 		}
 	}

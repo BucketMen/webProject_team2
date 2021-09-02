@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
 
+.nav_logo a:hover {
+    color: rgb(0, 0, 0);
+}
+
 body {
     margin: 0;
     font-family: 'Do Hyeon', sans-serif;
     font-size: 16px;
     
-    /* 전체페이지의 백그라운드 컬러 지정할려면 여기에 작성 */
 }
 #container {
     box-sizing: border-box;

@@ -17,6 +17,7 @@
     </nav>
     <div id="container">
         <div id="login_content">
+        
             <form id="loginform" method="post" action="loginCheck">
             	<input type="hidden" id="loginflag" name="login_flag" value="${loginModel.login_flag }">
                 <div class="id_area">
@@ -37,7 +38,7 @@
                 </div>
                 <div id="pwd_error" class="error">비밀번호를 입력해 주세요.</div>
 				<input type="hidden" id="submitflag" name="submit_flag" value="false">
-                <input type="button" class="input_submit" value="로그인"></botton>
+                <input type="button" class="input_submit" value="로그인">
 
                 <div class="check_info">
                     <div class="login_check">
