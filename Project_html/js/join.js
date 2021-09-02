@@ -30,3 +30,8 @@ email_select.onchange = () => {
     }
     email_last.value = email_select.options[email_select.selectedIndex].text; 
 }   
+
+const id_check = document.querySelector(".id_check");
+id_check.onclick=()=>{
+    
+}

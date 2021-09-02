@@ -28,12 +28,14 @@
         </header>
         <main>
             <form action="#" method="get" style="margin-bottom: 60px;">
+            <form id="joinform" method="get" action="joinInput">
                 <div id="join_content">
                     <div class="join_items">
                         <label class="join_label">아이디</label>
                         <span class="join_input">
-                            <input type="text" id="id_text" class="join_text" name="join_id" value="${joinModel.join_id}" >
-                        </span>
+                        	<input type="hidden" id ="idstatus" name="idstatus" value = "${empty idCheckFlag ? false : idCheckFlag}">
+                            <input type="text" id="id_text" class="join_text" name="join_id">
+                        </span>           
                         <div id="id_warning" class="join_warning">
                             <p class="warning_text">필수 정보입니다.</p>
                         </div>
@@ -41,7 +43,7 @@
                     <div class="join_items">
                         <label class="join_label">비밀번호</label>
                         <span class="join_input">
-                            <input type="password" class="join_text" name="join_pwd" value="${joinModel.join_pwd}">
+                            <input type="password" class="join_text" id="pwd_check" name="join_pwd">
                             <span class="join_input_text"></span>
                         </span>
                         <div class="join_warning">
@@ -51,17 +53,20 @@
                     <div class="join_items">
                         <label class="join_label">비밀번호 재확인</label>
                         <span class="join_input">
-                            <input type="password" class="join_text">
+                            <input type="password" class="join_text" id="pwd_check2" name="join_repwd">
                             <span class="join_input_text"></span>
                         </span>
                         <div class="join_warning">
                             <p class="warning_text">필수 정보입니다.</p>
                         </div>
+                        <div class="pwd_warning">
+                            <p class="pwd_warning_text">비밀번호가 일치하지 않습니다</p>
+                        </div>
                     </div>
                     <div class="join_items">
                         <label class="join_label">이름</label>
                         <span class="join_input">
-                            <input type="text" class="join_text" name="join_name" value="${joinModel.join_name}">
+                            <input type="text" class="join_text" name="join_name">
                             <span class="join_input_text"></span>
                         </span>
                         <div class="join_warning">
@@ -74,14 +79,14 @@
                         <div class="bir_warp">
                             <div class="email_xx">
                                 <span class="ps_box">
-                                    <input type="text" class="email_te{joinModel.joixt" name="join_email1" value="$n_email1}">
+                                    <input type="text" class="email_text" name="join_email1">
                                 </span>
                             </div>
                             <div class="A"><div class = "A_size">@</div></div>
                             <div>
                                 <div class="email_yy">
                                     <span class="ps_box">
-                                        <input type="text" id="email_last" name="join_email2" value="${joinModel.join_email2}">
+                                        <input type="text" id="email_last" name="join_email2">
                                     </span>
                                 </div>
                             </div>    
@@ -97,7 +102,7 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="join_warning">
+                        <div class="email_warning">
                             <p class="warning_text">필수 정보입니다.</p>
                         </div>
                     </div>
@@ -107,12 +112,12 @@
                         <div class="bir_warp">
                             <div class="bir_yy">
                                 <span class="ps_box">
-                                    <input type="text" class="join_text">
+                                    <input type="text" class="join_text" name="birth_year">
                                 </span>
                             </div>
                             <div class="bir_mm">
                                 <span class="ps_box">
-                                    <select class="bir_select">
+                                    <select class="bir_select" name="birth_month">
                                         <option value="0">월</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -131,7 +136,7 @@
                             </div>
                             <div class="bir_dd">
                                 <span class="ps_box">
-                                    <input type="text" class="join_text">
+                                    <input type="text" class="join_text" name="birth_day">
                                 </span>
                             </div>
                         </div>
@@ -144,6 +149,7 @@
                         <span class="button_text">가입하기</span>
                     </button>
                 </div>
+            </form>
             </form>
         </main>
         <footer>
@@ -159,6 +165,6 @@
         </footer>
     </div>
 
-    <script src="js/join.js"></script>
+    <script src="/js/join.js"></script>
 </body>
 </html>

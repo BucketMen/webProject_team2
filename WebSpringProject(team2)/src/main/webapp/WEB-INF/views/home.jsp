@@ -77,9 +77,9 @@
                 </li> 
 
                 <li class="nav-item" style="display: flex;">
-                    <a class="nav-link active" aria-current="page" href="login.jsp">로그인</a>
+                    <a class="nav-link active" aria-current="page" href="login">로그인</a>
                     <span class="nav-link active" style="padding-left: 0px; padding-right: 0px;">|</span>
-                    <a class="nav-link active" aria-current="page" href="join.jsp">회원가입</a>
+                    <a class="nav-link active" aria-current="page" href="join">회원가입</a>
                 </li>
                 <!-- <li class="nav-item" style="display: flex;">
                     <a class="nav-link active" aria-current="page" href="MyPage.html">아이디이름</a>

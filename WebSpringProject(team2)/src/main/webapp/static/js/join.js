@@ -1,8 +1,24 @@
 const join_text = document.querySelectorAll(".join_text");
 const join_warning = document.querySelectorAll(".join_warning");
-
+const join_id = document.querySelector(".join_text"); 
+const pwd_check = document.querySelector("#pwd_check");
+const pwd_check2 = document.querySelector("#pwd_check2");
+const pwd_warning = document.querySelector(".pwd_warning");
+for(let i = 0; i < join_text.length - 1; i++){
+	join_warning[i].style.display = "none";
+}
 for(let i = 0; i < join_text.length - 1; i++){
     join_text[i].onblur = () => {
+    	if(join_id.value.length != 0){
+    		location.href="/join/joincheck?join_id=" + join_id.value; 
+    	}
+    	if(pwd_check2.value.length != 0){
+    		if(pwd_check.value == pwd_check2.value){
+				pwd_warning.style.display = "none"
+			}else{
+				pwd_warning.style.display = "block"
+			}
+		}
         if(join_text[i].value.length == 0){
             join_warning[i].style.display = "block";
         }else { 
@@ -10,14 +26,24 @@ for(let i = 0; i < join_text.length - 1; i++){
         }
     }
 }
-
-// function mailcheck()
-// {
-//     const email_select = document.getElementById("email_select");
-//     const displaytext = email_select.options[email_select.selectedIndex].text;
-//     document.getElementById("email_last").value=displaytext;
-// }
-
+const email_text = document.querySelector(".email_text");
+const email_last = document.querySelector("#email_last");
+const email_warning = document.querySelector(".email_warning");
+	email_warning.style.display = "none";
+		email_text.onblur = () =>{
+			if(email_text.value.length == 0){
+				email_warning.style.display = "block";
+			}else{
+				email_warning.style.display = "none";
+			}
+		}
+		email_last.onblur = () =>{
+			if(email_text.value.length == 0){
+				email_warning.style.display = "block";
+			}else{
+				email_warning.style.display = "none";
+			}
+		}	
 
 
 const email_select = document.querySelector(".email_select");
@@ -30,3 +56,9 @@ email_select.onchange = () => {
     }
     email_last.value = email_select.options[email_select.selectedIndex].text; 
 }   
+
+const idstatus = document.querySelector("#idstatus");
+	if(idstatus.value == "true"){
+		alert("중복된 아이디 입니다");
+	}
+

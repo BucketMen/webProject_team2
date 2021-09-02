@@ -176,5 +176,16 @@ body {
     font-size: 1.1em;
 }
 
+.id_check{
+    border: 1px solid rgb(0, 0, 0);
+    margin: 5px;
+    background-color: black;
+    height: 40px;
+}
+
+.id_check_test{
+    color: white;
+}
+
 
 
