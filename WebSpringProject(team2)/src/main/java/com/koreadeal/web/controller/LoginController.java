@@ -5,14 +5,15 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.koreadeal.web.DAO.LoginDAO;
-import com.koreadeal.web.model.LoginModel;
 import com.koreadeal.web.beans.UserBean;
+import com.koreadeal.web.model.LoginModel;
 import com.koreadeal.web.service.LoginService;
 
 
@@ -54,12 +55,12 @@ public class LoginController {
 		int flag = loginDAO.loginCheck(loginModel);
 		int block = loginDAO.loginCheck(loginModel);
 		if(flag == 1 && block == 0) {
-			ModelAndView mavLoginSuccess = new ModelAndView("/index");
+			ModelAndView mavLoginSuccess = new ModelAndView("/join");
 			UserBean userBean = loginDAO.getUserBean(loginModel);
 			session.setAttribute("loginUserBean", userBean);
+			
 			return mavLoginSuccess;
 		}else {
-			
 			ModelAndView mavLoginFailure = new ModelAndView("/home");
 			return mavLoginFailure;
 		}

@@ -28,6 +28,8 @@ public class LoginService {
 	 * 
 	 * public String blockCheck(String blockdata) { int flag =
 	 * loginDAO.idCheck(blockdata); return null; }
+	 * 
+	 * DAO에서 서비스로 데이터가 넘어온다.
 	 */
 	
 	public LoginModel getLoginModel() {
@@ -37,6 +39,8 @@ public class LoginService {
 		loginModel.setLogin_flag("3");
 		loginModel.setSubmit_flag("false");
 		loginModel.setBlockdata("0");
+		System.out.println(loginModel.getBlockdata());
+		
 		
 		return loginModel;
 	}

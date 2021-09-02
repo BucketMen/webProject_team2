@@ -33,28 +33,21 @@ import com.koreadeal.web.model.LoginModel;
 
 @Repository
 public class LoginDAOimpl implements LoginDAO{
-
+	
 	@Autowired
 	private SqlSession session; 
 	
-	
+	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
 	private static final String NAME_SPACE = "com.koreadeal.web.DAO.LoginDAO"; 
 	
-	/*
-	 * @Override public Integer loginCheck(String user_id, String user_pwd, String
-	 * blockdata) {
-	 * 
-	 * return session.selectOne(NAME_SPACE + ".loginCheck"); }
-	 */
-
 	@Override
 	public Integer idCheck(String user_id) {
 		// TODO Auto-generated method stub
 		return session.selectOne(NAME_SPACE + ".loginCheck");
 	}
-
+	
 	@Override
 	public Integer pwdCheck(String user_pwd) {
 		// TODO Auto-generated method stub

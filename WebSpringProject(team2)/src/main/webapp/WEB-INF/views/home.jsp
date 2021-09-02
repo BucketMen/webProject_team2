@@ -61,7 +61,7 @@
                       <th id="boardtitle" class="border-sub-title">
                           <div>
                             <i class="far fa-clock"></i>
-                            <a href="border.html" style="text-decoration: none; color: black;">최근 게시글</a>
+                            <a href="/border" style="text-decoration: none; color: black;">최근 게시글</a>
                             </div>
                           <div><a href="border.html" id="more"> 더보기</a></div>
                       </th>
@@ -77,14 +77,14 @@
                   <tr>
                       <td id="tableline">
                           <a>[핫딜 게시판] </a>
-                      <a href="#">css 기초 다지기1 | </a>
+                      <a href="/border">css 기초 다지기1 | </a>
                       <span>5</span>
                   </td>
                   </tr>
                   <tr>
                       <td id="tableline">
                           <a>[핫딜 게시판] </a>
-                          <a href="#">css 기초 다지기1 | </a>
+                          <a href="/border">css 기초 다지기1 | </a>
                           <span>5</span>
                       </td>
                   </tr>
@@ -426,7 +426,7 @@
     <jsp:include page="/WEB-INF/views/include/footer.jsp"></jsp:include>
 	
     <!-- Optional JavaScript; choose one of the two! -->
-    
+	
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 
