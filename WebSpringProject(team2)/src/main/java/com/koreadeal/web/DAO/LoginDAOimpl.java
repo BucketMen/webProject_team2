@@ -29,6 +29,8 @@ import com.koreadeal.web.model.LoginModel;
  *	DB랑 mapper랑 연결한다.
  *	이 결과를 model에 담아준다 -> return으로 결과의 객체를 담고 -> 컨트롤러에서 반환된 객체를 addObject로 더하고 클라이언트에 데이터를 더해준다.
  *	addObject에 항상 모델만 들어갈 필요는 없다, setAttribute와 같은 역할을 한다.
+ *
+ *	어디서 에러가 발생 했느지 알아보려면 prinln()으로 데이터가 어떻게 넘어오는지 확인해 보면 된다.
  */
 
 @Repository
@@ -42,19 +44,19 @@ public class LoginDAOimpl implements LoginDAO{
 	
 	private static final String NAME_SPACE = "com.koreadeal.web.DAO.LoginDAO"; 
 	
-	@Override
+	@Autowired
 	public Integer idCheck(String user_id) {
 		// TODO Auto-generated method stub
 		return session.selectOne(NAME_SPACE + ".loginCheck");
 	}
 	
-	@Override
+	@Autowired
 	public Integer pwdCheck(String user_pwd) {
 		// TODO Auto-generated method stub
 		return session.selectOne(NAME_SPACE + ".loginCheck");
 	}
 
-	@Override
+	@Autowired
 	public Integer blockCheck(String blockdata) {
 		// TODO Auto-generated method stub
 		return session.selectOne(NAME_SPACE + ".loginCheck");
@@ -95,5 +97,7 @@ public class LoginDAOimpl implements LoginDAO{
 		});
 		return userBean;
 	}
+	
+	
 
 }

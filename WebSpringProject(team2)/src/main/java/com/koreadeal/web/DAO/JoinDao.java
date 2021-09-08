@@ -8,10 +8,9 @@ import org.springframework.stereotype.Repository;
 
 import com.koreadeal.web.model.JoinModel;
 
-public interface JoinDAO {
+public interface JoinDao {
 
 	public int idCheck(String join_id);
-	
 	
 		
 }

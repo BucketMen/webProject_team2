@@ -4,7 +4,7 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
  
-<mapper namespace="com.koreadeal.web.dao.LoginDAO">
+<mapper namespace="com.koreadeal.web.dao.LoginDao">
 	
 	<select id="userBean" resultType="com.koreadeal.web.model.UserBean">
 		select
