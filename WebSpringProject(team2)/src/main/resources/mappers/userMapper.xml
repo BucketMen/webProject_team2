@@ -3,7 +3,11 @@
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
+<<<<<<< HEAD
 <mapper namespace="com.spring.mvc.dao.JoinDao">
+=======
+<mapper namespace="com.spring.mvc.dao.LoginDAO">
+>>>>>>> c60aa342848d166dc9fa2749758ff6473ba15169
 
 	<select id="idCheck" resultType="Integer">
 		select
@@ -13,7 +17,6 @@
 		where
 			user_id = ?
 		and	user_pwd = ?
-		and	blockdata = 0;
 	</select>
 	
 </mapper>

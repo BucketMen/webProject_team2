@@ -5,7 +5,7 @@
   
 <mapper namespace = "com.koreadeal.web.DAO.JoinDao">
 
-<select id="idCheck" resultType="integer">
+<select id="idCheck" resultType="Integer">
 	SELECT 
 		COUNT(*) 
 	FROM 
@@ -13,4 +13,27 @@
 	WHERE
 		user_id = #{join_id};		
 	</select>
+<insert id="joinInsert" parameterType="com.koreadeal.web.beans.UserBean">
+	insert into
+		user_mst(
+		user_id,
+		user_pwd,
+		user_name,
+		user_email,
+		user_birthday,
+		
+		createdate,
+		updatedate
+	)
+	values(
+		#{user_id},
+		#{user_pwd},
+		#{user_name},
+		#{user_email},
+		#{user_birthday},
+		
+		now(),
+		now()		
+	);	
+</insert>		
 </mapper>	

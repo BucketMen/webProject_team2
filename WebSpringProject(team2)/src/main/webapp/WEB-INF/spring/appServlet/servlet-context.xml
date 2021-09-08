@@ -40,7 +40,7 @@
 	</beans:bean>
 	
 	<beans:bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<beans:property name="basePackage" value="com.spring.mvc.dao"></beans:property>
+		<beans:property name="basePackage" value="com.koreadeal.web.DAO"></beans:property>
 	</beans:bean>
 	
 	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">

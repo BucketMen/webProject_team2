@@ -39,8 +39,8 @@ public class LoginDAOimpl implements LoginDAO{
 	@Autowired
 	private SqlSession session; 
 	
-	@Autowired
-	private JdbcTemplate jdbcTemplate;
+	//@Autowired
+	//private JdbcTemplate jdbcTemplate;
 	
 	private static final String NAME_SPACE = "com.koreadeal.web.DAO.LoginDAO"; 
 	
@@ -61,7 +61,18 @@ public class LoginDAOimpl implements LoginDAO{
 		// TODO Auto-generated method stub
 		return session.selectOne(NAME_SPACE + ".loginCheck");
 	}
+	@Override
+	public UserBean getUserBean(LoginModel loginModel) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public Integer loginCheck(LoginModel loginModel) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
+	/*
 	@Autowired
 	public void setJdbcTemplate(DataSource dataSource) {
 		jdbcTemplate = new JdbcTemplate(dataSource);
@@ -97,7 +108,11 @@ public class LoginDAOimpl implements LoginDAO{
 		});
 		return userBean;
 	}
+<<<<<<< HEAD
 	
 	
+=======
+	*/
+>>>>>>> c60aa342848d166dc9fa2749758ff6473ba15169
 
 }
