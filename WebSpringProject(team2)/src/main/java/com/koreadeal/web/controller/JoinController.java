@@ -9,7 +9,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.koreadeal.web.DAO.JoinDAO;
 import com.koreadeal.web.model.JoinModel;
-import com.koreadeal.web.model.UserBean;
 import com.koreadeal.web.model.JoinModel;
 import com.koreadeal.web.service.JoinService;
 
@@ -19,9 +18,6 @@ public class JoinController {
 	
 	@Autowired
 	private JoinService joinService;
-	
-	@Autowired 
-	private JoinDAO joinDAO;
 	
 	@RequestMapping(value="/join", method = RequestMethod.GET)
 	public ModelAndView join() {
@@ -38,9 +34,10 @@ public class JoinController {
 		return mav2;
 	}
 	
-	@RequestMapping(value="/joinInput", method = RequestMethod.GET)
-	public ModelAndView joinInsert(UserBean bean) {	
-		int statusCount = joinDAO.joinInsert(bean);
+	@RequestMapping(value="/joinInput", method = RequestMethod.POST)
+	public ModelAndView joinInsert(JoinModel model) {	
+		int s = joinService.insertJoinModel(model);	
+		
 	return new ModelAndView("/home");	
 	}
 	

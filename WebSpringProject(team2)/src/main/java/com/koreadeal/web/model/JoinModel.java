@@ -56,8 +56,10 @@ public class JoinModel {
 		return birth_day;
 	}
 	public void setBirth_day(String birth_day) {
-		this.birth_day = birth_day;
+		this.birth_day = birth_day;	
 	}
+}
+	
 	
 	
 	

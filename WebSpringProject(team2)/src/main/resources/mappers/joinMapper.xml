@@ -22,7 +22,6 @@
 		user_email,
 		user_birthday,
 		
-		
 		createdate,
 		updatedate
 	)
@@ -32,7 +31,6 @@
 		#{user_name},
 		#{user_email},
 		#{user_birthday},
-		0
 		
 		now(),
 		now()		

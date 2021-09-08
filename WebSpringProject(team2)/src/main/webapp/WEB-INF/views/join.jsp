@@ -27,8 +27,7 @@
         </div>
         </header>
         <main>
-            <form action="#" method="get" style="margin-bottom: 60px;">
-            <form id="joinform" method="GET" action="joinInput">
+            <form id="joinform" action="/joinInput" method="post" style="margin-bottom: 60px;">
                 <div id="join_content">
                     <div class="join_items">
                         <label class="join_label">아이디</label>
@@ -149,7 +148,6 @@
                         <span class="button_text">가입하기</span>
                     </button>
                 </div>
-            </form>
             </form>
         </main>
         <footer>
