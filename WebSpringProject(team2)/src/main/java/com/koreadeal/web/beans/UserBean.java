@@ -5,6 +5,7 @@ public class UserBean {
 	private String user_pwd;
 	private String user_name;
 	private String user_birthday;
+	private String user_email;
 	private String blockdata;
 	
 	public String getUser_id() {
@@ -30,6 +31,12 @@ public class UserBean {
 	}
 	public void setUser_birthday(String user_birthday) {
 		this.user_birthday = user_birthday;
+	}
+	public String getUser_email() {
+		return user_email;
+	}
+	public void setUser_email(String user_email) {
+		this.user_email = user_email;
 	}
 	public String getBlockdata() {
 		return blockdata;

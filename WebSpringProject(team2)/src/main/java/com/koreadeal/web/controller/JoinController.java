@@ -9,6 +9,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.koreadeal.web.DAO.JoinDAO;
 import com.koreadeal.web.model.JoinModel;
+import com.koreadeal.web.model.UserBean;
+import com.koreadeal.web.model.JoinModel;
 import com.koreadeal.web.service.JoinService;
 
 @Controller
@@ -16,8 +18,10 @@ public class JoinController {
 	
 	
 	@Autowired
-	private JoinService joinservice;
+	private JoinService joinService;
 	
+	@Autowired 
+	private JoinDAO joinDAO;
 	
 	@RequestMapping(value="/join", method = RequestMethod.GET)
 	public ModelAndView join() {
@@ -28,11 +32,18 @@ public class JoinController {
 	@RequestMapping(value="/join/joincheck", method = RequestMethod.GET)
 	public ModelAndView JoinCheck(@RequestParam("join_id") String join_id) {
 		ModelAndView mav2 = new ModelAndView("/join");
-		boolean joinflag =joinservice.idCheck(join_id);
-		System.out.println(joinflag == true ? "아이디가 중복되었습니다" : "사용가능한 아이디 입니다");
+		boolean joinflag = joinService.idCheck(join_id);
+		mav2.addObject("join_id", join_id);
+		mav2.addObject("joinflag", joinflag);
 		return mav2;
 	}
 	
-	//@RequestMapping(value="joinInput", method = RequestMethod.GET)
+	@RequestMapping(value="/joinInput", method = RequestMethod.GET)
+	public ModelAndView joinInsert(UserBean bean) {	
+		int statusCount = joinDAO.joinInsert(bean);
+	return new ModelAndView("/home");	
+	}
+	
+	
 }	
 	

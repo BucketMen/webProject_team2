@@ -1,9 +1,5 @@
 Manifest-Version: 1.0
-<<<<<<< HEAD
 Built-By: Son
-=======
-Built-By: ￬ﾝﾴ￬ﾝﾀ￬ﾈﾘ
->>>>>>> 7d7cc9346d54fc6af5ea20a9646b73f7ca8317c7
 Build-Jdk: 16.0.2
 Created-By: Maven Integration for Eclipse
 

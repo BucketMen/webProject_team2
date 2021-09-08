@@ -2,14 +2,14 @@
     pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
     <script src="https://kit.fontawesome.com/c3df4d7d1c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/hstyle.css"/>
+    <link rel="stylesheet" href="/css/hstyle.css" />
     <link rel="stylesheet" href="/css/join_style.css" />
 </head>
 <body>
@@ -19,19 +19,22 @@
     <div id="container">
         <header id="mainheader">
             <nav id="join_navbar">
+                <!-- 로고(로고이미지, 홈페이지 이름) -->
+                <!-- 메뉴(자기소개, 게시글) -->
+                <!-- 링크(로그인, 회원가입) -->
                 <a href="/home.html" id="mainlogo">Korea's Deal</a>
             </nav>
         </div>
         </header>
         <main>
             <form action="#" method="get" style="margin-bottom: 60px;">
-            <form id="joinform" method="get" action="joinInput">
+            <form id="joinform" method="GET" action="joinInput">
                 <div id="join_content">
                     <div class="join_items">
                         <label class="join_label">아이디</label>
                         <span class="join_input">
-                        	<input type="hidden" id ="idstatus" name="idstatus" value = "${empty idCheckFlag ? false : idCheckFlag}">
-                            <input type="text" id="id_text" class="join_text" name="join_id">
+                        	<input type="hidden" id ="idstatus" name="idstatus" value = "${empty joinflag ? false : joinflag}">
+                            <input type="text" id="id_text" class="join_text" name="join_id" value="${empty join_id ? "": join_id}">
                         </span>           
                         <div id="id_warning" class="join_warning">
                             <p class="warning_text">필수 정보입니다.</p>
@@ -141,7 +144,7 @@
                             <p class="warning_text">필수 정보입니다.</p>
                         </div>
                     </div>
-
+					<input type="hidden" id="submitflag" name="submit_flag" value="false">
                     <button type="submit" class="join_button">
                         <span class="button_text">가입하기</span>
                     </button>
@@ -149,7 +152,17 @@
             </form>
             </form>
         </main>
-        <jsp:include page="/WEB-INF/views/include/footer.jsp"></jsp:include>
+        <footer>
+            <div id="foot">
+                <!-- 이름, 연락처, 주소, 이메일 -->
+                <ul>
+                    <li>웹프로젝트 2조</li>
+                    <li>팀원: 이은수, 손효현, 유정무</li>
+                    <li>주소: 부산 진구 전포동</li>
+                    <li>이메일: contect-us@kakao.com</li>
+                </ul>
+            </div>
+        </footer>
     </div>
 
     <script src="/js/join.js"></script>
