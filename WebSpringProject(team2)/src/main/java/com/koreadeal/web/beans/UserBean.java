@@ -6,7 +6,7 @@ public class UserBean {
 	private String user_name;
 	private String user_birthday;
 	private String user_email;
-	private String blockdata;
+	private int block;
 	
 	public String getUser_id() {
 		return user_id;
@@ -38,11 +38,11 @@ public class UserBean {
 	public void setUser_email(String user_email) {
 		this.user_email = user_email;
 	}
-	public String getBlockdata() {
-		return blockdata;
+	public int getBlock() {
+		return block;
 	}
-	public void setBlockdata(String blockdata) {
-		this.blockdata = blockdata;
+	public void setBlock(int block) {
+		this.block = block;
 	}
 	
 	

@@ -12,10 +12,7 @@ import com.koreadeal.web.model.LoginModel;
 
 
 public interface LoginDAO {
-	public Integer idCheck(String user_id);
-	public Integer pwdCheck(String user_pwd);
-	public Integer blockCheck(String blockdata);
-	public Integer loginCheck(LoginModel loginModel);
+	public UserBean loginCheck(LoginModel loginModel);
 	public UserBean getUserBean(LoginModel loginModel);
 	
 }

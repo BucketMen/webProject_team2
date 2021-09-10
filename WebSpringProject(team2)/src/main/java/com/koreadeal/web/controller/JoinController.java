@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.koreadeal.web.DAO.JoinDao;
 import com.koreadeal.web.model.JoinModel;
 import com.koreadeal.web.model.JoinModel;
 import com.koreadeal.web.service.JoinService;

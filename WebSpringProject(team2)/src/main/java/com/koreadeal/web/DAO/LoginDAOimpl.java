@@ -1,14 +1,7 @@
 package com.koreadeal.web.DAO;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
-import javax.sql.DataSource;
-
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import com.koreadeal.web.beans.UserBean;
@@ -44,75 +37,18 @@ public class LoginDAOimpl implements LoginDAO{
 	
 	private static final String NAME_SPACE = "com.koreadeal.web.DAO.LoginDAO"; 
 	
-	@Autowired
-	public Integer idCheck(String user_id) {
-		// TODO Auto-generated method stub
-		return session.selectOne(NAME_SPACE + ".loginCheck");
-	}
-	
-	@Autowired
-	public Integer pwdCheck(String user_pwd) {
-		// TODO Auto-generated method stub
-		return session.selectOne(NAME_SPACE + ".loginCheck");
-	}
-
-	@Autowired
-	public Integer blockCheck(String blockdata) {
-		// TODO Auto-generated method stub
-		return session.selectOne(NAME_SPACE + ".loginCheck");
-	}
 	@Override
 	public UserBean getUserBean(LoginModel loginModel) {
-		// TODO Auto-generated method stub
-		return null;
+		return session.selectOne(NAME_SPACE + ".getUserBean", loginModel.getLogin_id());
 	}
 	@Override
-	public Integer loginCheck(LoginModel loginModel) {
-		// TODO Auto-generated method stub
-		return null;
+	public UserBean loginCheck(LoginModel loginModel) {
+		UserBean userBean = new UserBean();
+		userBean.setUser_id(loginModel.getLogin_id());
+		userBean.setUser_pwd(loginModel.getLogin_pwd());
+		return session.selectOne(NAME_SPACE + ".loginCheck", userBean);
 	}
-	
-	/*
-	@Autowired
-	public void setJdbcTemplate(DataSource dataSource) {
-		jdbcTemplate = new JdbcTemplate(dataSource);
-	}
-	
-	@Override
-	public Integer loginCheck(LoginModel loginModel) {
-		String sql = "select count(*) from user_mst where user_id = ? and user_pwd = ?";
-		int flag = jdbcTemplate.queryForObject(sql, new Object[] {loginModel.getLogin_id(), loginModel.getLogin_pwd()},
-				new RowMapper<Integer>() {
-			@Override
-			public Integer mapRow(ResultSet rs, int rowNum) throws SQLException {
-				return rs.getInt(1);
-			}
-		});
-		return flag;
-	}
-	
-	@Override
-	public UserBean getUserBean(LoginModel loginModel) {
-		String sql = "select user_id, user_pwd, user_name, user_birthday from user_mst where user_id = ? and user_pwd = ?";
-		UserBean userBean = jdbcTemplate.queryForObject(sql, new Object[] {loginModel.getLogin_id(), loginModel.getLogin_pwd()},
-				new RowMapper<UserBean>() {
-			@Override
-			public UserBean mapRow(ResultSet rs, int rowNum) throws SQLException {
-				UserBean bean = new UserBean();
-				bean.setUser_id(rs.getString(1));
-				bean.setUser_pwd(rs.getString(2));
-				bean.setUser_name(rs.getString(3));
-				bean.setUser_birthday(rs.getString(4));
-				return bean;
-			}
-		});
-		return userBean;
-	}
-<<<<<<< HEAD
-	
-	
-=======
-	*/
->>>>>>> c60aa342848d166dc9fa2749758ff6473ba15169
+}	
 
-}
+
+

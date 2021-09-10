@@ -1,7 +1,10 @@
 package com.koreadeal.web.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.koreadeal.web.DAO.LoginDAO;
+import com.koreadeal.web.beans.UserBean;
 import com.koreadeal.web.model.LoginModel;
 
 @Service
@@ -32,6 +35,9 @@ public class LoginService {
 	 * DAO에서 서비스로 데이터가 넘어온다.
 	 */
 	
+	@Autowired
+	private LoginDAO loginDAO; 
+	
 	public LoginModel getLoginModel() {
 		LoginModel loginModel = new LoginModel();
 		loginModel.setLogin_id("");
@@ -43,6 +49,28 @@ public class LoginService {
 		
 		
 		return loginModel;
+	}
+	
+	public int loginCheck(LoginModel loginModel) {
+		UserBean userBean = loginDAO.loginCheck(loginModel);
+		String id = userBean.getUser_id();
+		String pwd = userBean.getUser_pwd();
+		int block = userBean.getBlock();
+		
+		if(id == null || id.equals("")) {
+			return 0;
+		}else if(pwd == null || pwd.equals("")) {
+			return 1;
+		}else if(block == 1){
+			return 2;
+		}else {
+			return 3;
+		}
+	}
+	
+	public UserBean getSessionBean(LoginModel loginModel) {
+		return loginDAO.getUserBean(loginModel);
+		
 	}
 }
 

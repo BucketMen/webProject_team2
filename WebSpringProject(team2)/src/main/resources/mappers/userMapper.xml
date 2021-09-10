@@ -3,20 +3,61 @@
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
-<<<<<<< HEAD
-<mapper namespace="com.spring.mvc.dao.JoinDao">
-=======
 <mapper namespace="com.spring.mvc.dao.LoginDAO">
->>>>>>> c60aa342848d166dc9fa2749758ff6473ba15169
-
+<!-- 
 	<select id="idCheck" resultType="Integer">
 		select
 			count(*)
 		from
 			user_mst
 		where
-			user_id = ?
-		and	user_pwd = ?
+			user_id = #{user_id};
+	</select>
+	
+	<select id="pwdCheck" resultType="Integer">
+		select
+			count(*)
+		from
+			user_mst
+		where
+			user_id = #{user_id};
+			user_pwd = #{user_pwd};
+	</select>
+	
+	<select id="blockCheck" resultType="Integer">
+		select
+			block
+		from
+			user_mst
+		where
+			user_id = #{user_id};
+			user_pwd = #{user_pwd};
+	</select>
+-->
+	<select id="loginCheck" resultType="com.koreadeal.web.beans.UserBean">
+		select
+			m.user_id,
+			s.user_pwd,
+			s.block
+		from
+			user_mst m
+			left outer join user_mst s on(s.user_id = m.user_id and s.user_pwd = #{user_pwd})
+		where
+			m.user_id = #{user_id};
+	</select>
+	
+	<select id="getUserBean" resultType="com.koreadeal.web.beans.UserBean">
+		select
+			user_id,
+			user_pwd,
+			user_name,
+			user_birthday,
+			user_email,
+			block
+		from	
+			user_mst
+		where
+			user_id = #{join_id};
 	</select>
 	
 </mapper>

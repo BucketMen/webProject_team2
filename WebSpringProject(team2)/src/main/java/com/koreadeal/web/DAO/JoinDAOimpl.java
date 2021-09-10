@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import com.koreadeal.web.beans.UserBean;
 
 @Repository
-public class JoinDAOimpl implements JoinDao{
+public class JoinDAOimpl implements JoinDAO{
 	
 	@Autowired
 	private SqlSession session;
