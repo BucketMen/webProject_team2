@@ -72,6 +72,13 @@ public class LoginService {
 		return loginDAO.getUserBean(loginModel);
 		
 	}
+	
+	public LoginModel getModel(LoginModel model) {
+		LoginModel loginModel = new LoginModel();
+		loginModel.setLogin_id(model.getLogin_id());
+		loginModel.setLogin_pwd(model.getLogin_pwd());
+		return loginModel;
+	}
 }
 
 /*
