@@ -64,6 +64,8 @@
 	                		<a class="nav-link active" aria-current="page" href="/login">로그인</a>
                     		<span class="nav-link active" style="padding-left: 0px; padding-right: 0px;">|</span>
                     		<a class="nav-link active" aria-current="page" href="/join">회원가입</a>
+                    		<span class="nav-link active" style="padding-left: 0px; padding-right: 0px;">|</span>
+                    		<a class="nav-link active" aria-current="page" href="/admin_login">관리자 로그인</a>
 	                	</c:when>
 	                	<c:otherwise>
 	                		<div>

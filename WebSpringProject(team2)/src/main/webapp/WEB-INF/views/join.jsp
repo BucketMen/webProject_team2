@@ -154,9 +154,9 @@
             <div id="foot">
                 <!-- 이름, 연락처, 주소, 이메일 -->
                 <ul>
-                    <li>웹프로젝트 2조</li>
-                    <li>팀원: 이은수, 손효현, 유정무</li>
-                    <li>주소: 부산 진구 전포동</li>
+                    <li>프로젝트 5조</li>
+                    <li>팀원: 이진웅 정규석 전우강</li>
+                    <li>주소: 대한민국 부산시</li>
                     <li>이메일: contect-us@kakao.com</li>
                 </ul>
             </div>
@@ -164,5 +164,6 @@
     </div>
 
     <script src="/js/join.js"></script>
+    
 </body>
 </html>

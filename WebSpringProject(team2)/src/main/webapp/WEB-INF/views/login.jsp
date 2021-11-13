@@ -17,7 +17,7 @@
         <div id="login_content">
         
             <form method="post" id="loginform" action="loginCheck">
-                
+                <input type="hidden" id="loginflag" name="login_flag" value="${loginModel.login_flag}">
                 <div class="id_area">
                     <div class="input_row">
                         <span class="input_box">
@@ -25,6 +25,7 @@
                         </span>
                     </div>
                 </div>
+                <div id="id_error" class="error">아이디를 입력해 주세요</div>
         
                 <div class="pwd_area">
                     <div class="input_row">
@@ -33,8 +34,8 @@
                         </span>
                     </div>
                 </div>
-                
                 <div id="pwd_error" class="error">비밀번호를 입력해 주세요.</div>
+                					<input type="hidden" id="submitflag" name="submit_flag" value="false">
                 <input type="submit" class="input_submit" value="로그인"><!-- js호출 -->
                 <button type="button" onclick="location.href='join.html'" class="btn btn-secondary">회원가입</button>
                

@@ -1,23 +1,23 @@
 package com.koreadeal.web.model;
 
 public class LoginModel {
-	private String login_id;
-	private String login_pwd;
+	private String user_id;
+	private String user_pwd;
 	private String login_flag;
 	private String submit_flag;
 	private String blockdata;
 	
-	public String getLogin_id() {
-		return login_id;
+	public String getUser_id() {
+		return user_id;
 	}
-	public void setLogin_id(String login_id) {
-		this.login_id = login_id;
+	public void setUser_id(String user_id) {
+		this.user_id = user_id;
 	}
-	public String getLogin_pwd() {
-		return login_pwd;
+	public String getUser_pwd() {
+		return user_pwd;
 	}
-	public void setLogin_pwd(String login_pwd) {
-		this.login_pwd = login_pwd;
+	public void setUser_pwd(String user_pwd) {
+		this.user_pwd = user_pwd;
 	}
 	public String getLogin_flag() {
 		return login_flag;
@@ -37,6 +37,7 @@ public class LoginModel {
 	public void setBlockdata(String blockdata) {
 		this.blockdata = blockdata;
 	}
+	
 	
 	
 }

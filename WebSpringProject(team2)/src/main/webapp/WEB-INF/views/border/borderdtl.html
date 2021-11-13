@@ -100,16 +100,16 @@
             
             <h2>
               <span style="color: rgb(253, 61, 61);font-size: 0.6em;">국내<br></span>
-              게시글 제목
+              게시글 제목 : ${borderDtlModel.border_title}
             </h2>
             <div id="writerinfo">
-              <div>작성자: ${}</div>
+              <div>작성자: ${borderDtlModel.writer_name}</div>
               <span> | </span>
-              <div>조회수 ${}</div>
+              <div>조회수 ${borderDtlModel.border_count}</div>
               <span> | </span>
               <div>댓글 ${}</div>
               <span> | </span>
-              <div>작성일 ${}</div>
+              <div>작성일 ${borderDtlModel.border_date}</div>
             </div>
             <div id="infopage">
 
@@ -131,19 +131,19 @@
                 <div id="dtlcontent">
                   안녕하세요
                   <br>
-                  이곳은 게시글의 내용이 들어오는 부분입니다 
+                  ${borderDtlModel.content} 
                 </div>
               </div>
             </main>
             <div id="otherpage">  
               <table id="infotable">
                 <tr style="border: solid 1px rgb(182, 182, 182);">
-                  <td id="infoname" align="center" style="border: solid 1px rgb(182, 182, 182);">다음글</td>
-                  <td id="infocontent"><a href="#">다음 게시글</a></td>
+                  <td id="infoname" align="center" style="border: solid 1px rgb(182, 182, 182);">이전글</td>
+                  <td id="infocontent"><a href="/borderdtl?border_code={borderDtlModel.border_code_pre}$page=${borderDtlModel.page}">${borderDtlModel.border_title_pre}</a></td>
                 </tr>
                 <tr>
-                  <td id="infoname"  align="center" style="border: solid 1px rgb(182, 182, 182); ">이전글</td>
-                  <td id="infocontent" style="border: solid 1px rgb(182, 182, 182);"><a href="#">이전 게시글</a></td>
+                  <td id="infoname"  align="center" style="border: solid 1px rgb(182, 182, 182); ">다음글</td>
+                  <td id="infocontent" style="border: solid 1px rgb(182, 182, 182);"><a href="/borderdtl?border_code=${borderDtlModel.border_code_next }&page=${borderDtlModel.page}">${borderDtlModel.border_title_next}</a></td>
                 </tr>
               </table>
             </div>
@@ -219,22 +219,22 @@
     </main>
     <!-- main End ------------------------------------------------------------------------------------------------------------------ -->
 
-    <footer>
-      <div id="foot">
-          <!-- 이름, 연락처, 주소, 이메일 -->
-          <ul>
-            <li>부산 코리아IT학원</li>
-            <li id="slash">|</li>
-            <li>웹프로젝트 2조</li>
-            <li id="slash">|</li>
-            <li>팀원: 이은수, 손효현, 유정무</li>
-            <li id="slash">|</li>
-            <li>주소: 부산 진구 전포동</li>
-            <li id="slash">|</li>
-            <li>contect-us@kakao.com</li>
-          </ul>
-      </div>
-  </footer>
+            <footer>
+	<div id="foot">
+		<!-- 이름, 연락처, 주소, 이메일 -->
+		<ul>
+			<li></li>
+			<li id="slash">|</li>
+			<li>웹프로젝트 5조</li>
+			<li id="slash">|</li>
+			<li>팀원: 손효현,정규석,이진웅,전우강</li>
+			<li id="slash">|</li>
+			<li>주소: 부산 냉정</li>
+			<li id="slash">|</li>
+			<li>contect-us@kakao.com</li>
+		</ul>
+	</div>
+</footer>
 
     <!-- Optional JavaScript; choose one of the two! -->
     <script>

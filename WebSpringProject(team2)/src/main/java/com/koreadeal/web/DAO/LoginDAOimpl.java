@@ -39,13 +39,13 @@ public class LoginDAOimpl implements LoginDAO{
 	
 	@Override
 	public UserBean getUserBean(LoginModel loginModel) {
-		return session.selectOne(NAME_SPACE + ".getUserBean", loginModel.getLogin_id());
+		return session.selectOne(NAME_SPACE + ".getUserBean", loginModel.getUser_id());
 	}
 	@Override
 	public UserBean loginCheck(LoginModel loginModel) {
 		UserBean userBean = new UserBean();
-		userBean.setUser_id(loginModel.getLogin_id());
-		userBean.setUser_pwd(loginModel.getLogin_pwd());
+		userBean.setUser_id(loginModel.getUser_id());
+		userBean.setUser_pwd(loginModel.getUser_pwd());
 		return session.selectOne(NAME_SPACE + ".loginCheck", userBean);
 	}
 }	

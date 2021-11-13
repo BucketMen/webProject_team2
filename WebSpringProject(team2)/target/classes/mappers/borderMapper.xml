@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mapper namespace = "com.koreadeal.web.DAO.BorderDAO">
+
+<select id="getBorderList" resultType="com.koreadeal.web.beans.BorderBean">
+	select
+		*
+	from
+		border_dtl;
+	order by 
+		border_code desc;	
+</select>
+
+<insert id="insertBorder" parameterType="com.koreadeal.web.beans.BorderBean">
+	insert into
+		border_dtl;
+		values(
+			0,
+			#{border_title},
+			#{border_content},
+			#{writer_name},
+			#{writer_ip},
+			now(),
+			0,
+			now(),
+			now()
+			
+		);
+</insert>
+
+<select id ="getBorderDtl" parameterType="com.koreadeal.web.beans.BorderBean">
+	select * from border_dtl where border_code = #{border_code};
+</select>
+
+</mapper>		

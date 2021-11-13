@@ -40,8 +40,8 @@ public class LoginService {
 	
 	public LoginModel getLoginModel() {
 		LoginModel loginModel = new LoginModel();
-		loginModel.setLogin_id("");
-		loginModel.setLogin_pwd("");
+		loginModel.setUser_id("");
+		loginModel.setUser_pwd("");
 		loginModel.setLogin_flag("3");
 		loginModel.setSubmit_flag("false");
 		loginModel.setBlockdata("0");
@@ -75,8 +75,8 @@ public class LoginService {
 	
 	public LoginModel getModel(LoginModel model) {
 		LoginModel loginModel = new LoginModel();
-		loginModel.setLogin_id(model.getLogin_id());
-		loginModel.setLogin_pwd(model.getLogin_pwd());
+		loginModel.setUser_id(model.getUser_id());
+		loginModel.setUser_pwd(model.getUser_pwd());
 		return loginModel;
 	}
 }

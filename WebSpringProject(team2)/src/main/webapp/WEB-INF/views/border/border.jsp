@@ -50,118 +50,20 @@
                         <th class="border_date">작성일</th>
                         <th class="border_count">조회수</th> 
                     </tr>
+                    <c:forEach var = "bean" items="${borderModel.borderList }">
                     <tr>
-                        <td class="border_index">1</td>
-                        <td class="border_title" id="titleset">&nbsp;
+                        <td class="border_index">${bean.border_code }</td>
+                        <td class="border_title" id="titleset"><a href="borderdtl?border_code=${bean.border_code }&page=${borderModel.page}">${bean.border_title }</a>;
                             <div class="imgtitle"><img src="images/s1.png" id="borderimg"/></div>
                             <div class="imgtitle"><a href="borderdtl.html">첫번째 게시글</a></div>
                             <div class="imgtitle" style="color: blue;">5</div>
                         </td>
-                        <td class="border_writer">test</td>
-                        <td class="border_date">2020-08-15</td>
-                        <td class="border_count">154</td>
+                        <td class="border_writer">${bean.writer_name }</td>
+                        <td class="border_date">${bean.border_date }</td>
+                        <td class="border_count">${bean.border_count }</td>
                     </tr>
+                    </c:forEach>
                     
-                    <tr>
-                        <td class="border_index">1</td>
-                        <td class="border_title" id="titleset">&nbsp;
-                            <div class="imgtitle"><img src="images/s1.png" style="height: 50px; padding-top: 5px"/></div>
-                            <div class="imgtitle">게시물 1번</div>
-                            <div class="imgtitle" style="color: blue;">5</div>
-                        </td>
-                        <td class="border_writer">test</td>
-                        <td class="border_date">2020-08-15</td>
-                        <td class="border_count">154</td>
-                    </tr>
-                    <tr>
-                        <td class="border_index">1</td>
-                        <td class="border_title" id="titleset">&nbsp;
-                            <div class="imgtitle"><img src="images/s1.png" style="height: 50px; padding-top: 5px"/></div>
-                            <div class="imgtitle">게시물 1번</div>
-                            <div class="imgtitle" style="color: blue;">5</div>
-                        </td>
-                        <td class="border_writer">test</td>
-                        <td class="border_date">2020-08-15</td>
-                        <td class="border_count">154</td>
-                    </tr>
-                    <tr>
-                        <td class="border_index">1</td>
-                        <td class="border_title" id="titleset">&nbsp;
-                            <div class="imgtitle"><img src="images/s1.png" style="height: 50px; padding-top: 5px"/></div>
-                            <div class="imgtitle">게시물 1번</div>
-                            <div class="imgtitle" style="color: blue;">5</div>
-                        </td>
-                        <td class="border_writer">test</td>
-                        <td class="border_date">2020-08-15</td>
-                        <td class="border_count">154</td>
-                    </tr>
-                    <tr>
-                        <td class="border_index">1</td>
-                        <td class="border_title" id="titleset">&nbsp;
-                            <a class="imgtitle"><img src="images/s1.png" style="height: 50px; padding-top: 5px"/></a>
-                            <a class="imgtitle">게시물 1번</a>
-                            <div class="imgtitle" style="color: blue;">5</div>
-                        </td>
-                        <td class="border_writer">test</td>
-                        <td class="border_date">2020-08-15</td>
-                        <td class="border_count">154</td>
-                    </tr>
-                    <tr>
-                        <td class="border_index">1</td>
-                        <td class="border_title" id="titleset">&nbsp;
-                            <div class="imgtitle"><img src="images/s1.png" style="height: 50px; padding-top: 5px"/></div>
-                            <div class="imgtitle">게시물 1번</div>
-                            <div class="imgtitle" style="color: blue;">5</div>
-                        </td>
-                        <td class="border_writer">test</td>
-                        <td class="border_date">2020-08-15</td>
-                        <td class="border_count">154</td>
-                    </tr>
-                    <tr>
-                        <td class="border_index">1</td>
-                        <td class="border_title" id="titleset">&nbsp;
-                            <div class="imgtitle"><img src="images/s1.png" style="height: 50px; padding-top: 5px"/></div>
-                            <div class="imgtitle">게시물 1번</div>
-                            <div class="imgtitle" style="color: blue;">5</div>
-                        </td>
-                        <td class="border_writer">test</td>
-                        <td class="border_date">2020-08-15</td>
-                        <td class="border_count">154</td>
-                    </tr>
-                    <tr>
-                        <td class="border_index">1</td>
-                        <td class="border_title" id="titleset">&nbsp;
-                            <div class="imgtitle"><img src="images/s1.png" style="height: 50px; padding-top: 5px"/></div>
-                            <div class="imgtitle">게시물 1번</div>
-                            <div class="imgtitle" style="color: blue;">5</div>
-                        </td>
-                        <td class="border_writer">test</td>
-                        <td class="border_date">2020-08-15</td>
-                        <td class="border_count">154</td>
-                    </tr>
-                    <tr>
-                        <td class="border_index">1</td>
-                        <td class="border_title" id="titleset">&nbsp;
-                            <div class="imgtitle"><img src="images/s1.png" style="height: 50px; padding-top: 5px"/></div>
-                            <div class="imgtitle">게시물 1번</div>
-                            <div class="imgtitle" style="color: blue;">5</div>
-                        </td>
-                        <td class="border_writer">test</td>
-                        <td class="border_date">2020-08-15</td>
-                        <td class="border_count">154</td>
-                    </tr>
-                    <tr>
-                        <td class="border_index">1</td>
-                        <td class="border_title" id="titleset">&nbsp;
-                            <div class="imgtitle"><img src="images/s1.png" style="height: 50px; padding-top: 5px"/></div>
-                            <div class="imgtitle">게시물 1번</div>
-                            <div class="imgtitle" style="color: blue;">5</div>
-                        </td>
-                        <td class="border_writer">test</td>
-                        <td class="border_date">2020-08-15</td>
-                        <td class="border_count">154</td>
-                    </tr>
-
                 </table>
             </div>
             
@@ -175,7 +77,7 @@
                     <span><a href=borderp?page=${borderModel.pageStart - 1 eq 0 ? 1 : borderModel.pageStart - 1}><i class="fas fa-angle-left"></i></a></span>
                    
                     <c:forEach var="i" begin="${borderModel.pageStart }" end="${borderModel.pageEnd }">
-                        <span><a href=borderp?page=${i }>page</a></span>
+                        <span><a href=borderp?page=${i}>${i }</a></span>
                     </c:forEach>
                     
                     <span><a href=borderp?page=${borderModel.pageEnd eq borderModel.totalPage ? borderModel.pageEnd : borderModel.pageEnd+1 }><i class="fas fa-angle-right"></i></a></span>

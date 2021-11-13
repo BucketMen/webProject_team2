@@ -3,7 +3,7 @@
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
- 
+ <!-- 
 <mapper namespace="com.koreadeal.web.dao.LoginDao">
 	
 	<select id="userBean" resultType="com.koreadeal.web.model.UserBean">
@@ -13,19 +13,19 @@
 			user_mst
 	</select>
 	<select id="getUser_id" resultType="String">
-		select * from student_mst;
+		select * from user_mst;
 	</select>
 	
 	<select id="getUser_pwd" resultType="String">
-		select seq from student_mst;
+		select seq from user_mst;
 	</select>
 	
 	<select id="getBlockdata" resultType="String">
-		select name from student_mst where seq = #{seq};
+		select name from user_mst where seq = #{seq};
 	</select>
 	
 </mapper>
-<!-- 
+
 
 <mapper namespace="com.koreadeal.web.dao.LoginDAO"/>
 	<select resultType="com.koreadeal.web.model.UserBean">

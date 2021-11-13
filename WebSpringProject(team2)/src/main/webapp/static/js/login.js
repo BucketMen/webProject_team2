@@ -9,9 +9,20 @@ input_id.onblur = () => {
     }
 }
 
+const input_pwd = document.querySelector('#pwd');
+input_pwd.onblur = () => {
+    if(input_pwd.value.length == 0){
+        const pwd_error = document.querySelector('#pwd_error');
+        pwd_error.style.display = "block";
+    }else {
+        const pwd_error = document.querySelector('#pwd_error');
+        pwd_error.style.display = "none";
+    }
+}
+
 const submit_button = document.querySelector('.input_submit');
 submit_button.onclick = () => {
-    if(input_id.value.length == 0){
+    if(input_id.value.length == 0){  
         const id_error = document.querySelector('#id_error');
         id_error.style.display = "block";
     }else {
@@ -24,7 +35,11 @@ submit_button.onclick = () => {
             pwd_error.style.display = "block";
         }else {
             const pwd_error = document.querySelector('#pwd_error');
+            		const loginform = document.querySelector('#loginform');
+            		const submitflag = document.querySelector('#submitflag');
             pwd_error.style.display = "none";
+            	submitflag.value="true";
+            	loginform.submit;
         }
     }
 }

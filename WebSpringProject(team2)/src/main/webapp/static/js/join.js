@@ -7,7 +7,7 @@ const pwd_check = document.querySelector("#pwd_check");
 const pwd_check2 = document.querySelector("#pwd_check2");
 const pwd_warning = document.querySelector(".pwd_warning");
 const submitflag = document.querySelector("#submitflag");
-for(let i = 0; i < join_text.length - 1; i++){
+for(let i = 0; i < join_text.length - 1; i++){ 
 	join_warning[i].style.display = "none";
 }
 id_text.onblur = () => {

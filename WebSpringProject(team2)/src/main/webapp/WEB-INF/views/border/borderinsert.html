@@ -95,28 +95,31 @@
     <main>
         <div id="insertcontainer">
           
-          <form action="">
+          <form id ="borderinsertform" method="post" action="/borderdatainsert">
             <select name="category" id="selectcategory">
               <option value="korea">국내핫딜</option>
               <option value="global">해외핫딜</option>
             </select>
 
-            <div><input type="text" id="titleinsert" placeholder="제목을 입력하세요" ></div><hr>
-            
+            <div><input type="text" id="titleinsert"  name="border_title" placeholder="제목을 입력하세요" ></div><hr>
+            <div>작성자 : ${loginUserBean.user_name}</div>
+            <input type="hidden" name ="user_name" value="${loginUserBean.user_name}">
             <div id="linkarea">
               <div id="linkname">구매링크</div>
-              <input type="text" id="linkbox" placeholder="여기에 링크를 입력해주세요 ( https:// 혹은 http://를 같이 입력력하여야 합니다 )">
+              <input type="text" id="linkbox" placeholder="여기에 링크를 입력해주세요 ( https:// 혹은 http://를 같이 입력하여야 합니다 )">
             </div>
             <div id="linkarea">
               <div id="linkname" style="padding-top: 15px;">주의사항</div>
-              <textarea name="" id="linkbox" placeholder="여기에 내용을 입력해주세요"></textarea>
+              <textarea name="content_textarea" id="linkbox" placeholder="여기에 내용을 입력해주세요"></textarea>
             </div>
             
             
             <div id="contentinsert" ><textarea name="" style="width: 100%; height: 30em;" placeholder="여기에 본문을 입력해주세요"></textarea></div>
             <div style="display: flex; justify-content: space-between;"> 
               <input type="button" value="사진추가">
-              <input type="submit" value="게시글 작성" style="background-color: tomato; border-radius: 3px;">
+              <inpur type ="hidden" id ="submitFlag" name="submitFlag" value="false">
+              <input type="submit" id ="insertButton" value="게시글 작성" style="background-color: tomato; border-radius: 3px;">
+               <input type="submit" id="reset" value="다시 작성" style="background-color: tomato; border-radius: 3px;">
             </div>
          </form>
            
@@ -124,24 +127,25 @@
       </main>
     <!-- main End ------------------------------------------------------------------------------------------------------------------ -->
 
-    <footer>
-      <div id="foot">
-          <!-- 이름, 연락처, 주소, 이메일 -->
-          <ul>
-            <li>부산 코리아IT학원</li>
-            <li id="slash">|</li>
-            <li>웹프로젝트 2조</li>
-            <li id="slash">|</li>
-            <li>팀원: 이은수, 손효현, 유정무</li>
-            <li id="slash">|</li>
-            <li>주소: 부산 진구 전포동</li>
-            <li id="slash">|</li>
-            <li>contect-us@kakao.com</li>
-          </ul>
-      </div>
-  </footer>
-
+            <footer>
+	<div id="foot">
+		<!-- 이름, 연락처, 주소, 이메일 -->
+		<ul>
+			<li></li>
+			<li id="slash">|</li>
+			<li>웹프로젝트 5조</li>
+			<li id="slash">|</li>
+			<li>팀원: 손효현,정규석,이진웅,전우강</li>
+			<li id="slash">|</li>
+			<li>주소: 부산 냉정</li>
+			<li id="slash">|</li>
+			<li>contect-us@kakao.com</li>
+		</ul>
+	</div>
+</footer>
+		
     <!-- Optional JavaScript; choose one of the two! -->
+    <script src="/js/borderInsert.js"></script>
     <script>
         var mySwiper = new Swiper(".swiper-container", {
             loop: true,
@@ -155,6 +159,7 @@
             },
         });
     </script>
+
     
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>

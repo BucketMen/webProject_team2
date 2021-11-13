@@ -46,14 +46,17 @@ public class LoginController {
 	HttpSession session = request.getSession();
 		
 		int flag = loginService.loginCheck(loginModel);
+		
+		
 		if(flag == 3) {
-			ModelAndView mavLoginSuccess = new ModelAndView("/join");
+			ModelAndView mavLoginSuccess = new ModelAndView("/home");
 			UserBean sessionBean = loginService.getSessionBean(loginModel);
 			session.setAttribute("loginUserBean", sessionBean);
 			
+			
 			return mavLoginSuccess;
 		}else {
-			ModelAndView mavLoginFailure = new ModelAndView("/home");
+			ModelAndView mavLoginFailure = new ModelAndView("/join");
 
 			return mavLoginFailure;
 		}
